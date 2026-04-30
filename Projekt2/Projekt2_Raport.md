@@ -252,14 +252,3 @@ $trucks\_small\_count_{m,s}$ — małe ciężarówki (M→S):
 |--------------------|----|----|-----|
 | M1                 | 0  | 6  | 0  |
 | M2                 | 7  | 1  | 7  |
-
-#### Weryfikacja kosztów
-
-| Składnik | Obliczenia | Koszt [tys. zł] |
-|----------|-----------|-----------------|
-| Magazyny | $232 + 624$ | 856,0 |
-| Transport W→M | $105 \cdot 4 + 58 \cdot 4 + 32 \cdot 8$ | 908,0 |
-| Transport M→S | $58 \cdot 20 + 67 \cdot 8 + 9 \cdot 19 + 61 \cdot 15$ | 2782,0 |
-| Duże ciężarówki | $10 \cdot 3$ | 30,0 |
-| Małe ciężarówki | $21 \cdot 0{,}9$ | 18,9 |
-| **Suma** | | **4594,9** |
