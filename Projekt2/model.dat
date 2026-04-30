@@ -1,0 +1,47 @@
+set W := W1 W2;
+set P := P1 P2;
+set M := M1 M2;
+set T := none small large;
+set S := S1 S2 S3;
+
+set MT := (M1, small) (M1, large)
+          (M2, none) (M2, small) (M2, large);
+
+param production :
+        W1   W2 :=
+   P1   52   67
+   P2   53   70 ;
+
+param demand :
+        S1   S2   S3 :=
+   P1   34   31   22
+   P2   33   36   39 ;
+
+param transport_unit_cost_factory_to_warehouse :
+        M1   M2 :=
+   W1    3    4
+   W2    4    8 ;
+
+param transport_unit_cost_warehouse_to_shop :
+        S1   S2   S3 :=
+   M1   12   20   20
+   M2    8   19   15 ;
+
+param truck_big_capacity       := 22;
+param truck_small_capacity     := 10;
+param truck_big_maintenance_cost   := 3;
+param truck_small_maintenance_cost := 0.9;
+
+param warehouse_capacity :=
+   M1  small   58
+   M1  large  153
+   M2  none     0
+   M2  small   97
+   M2  large  156 ;
+
+param warehouse_cost :=
+   M1  small  232
+   M1  large  692
+   M2  none     0
+   M2  small  440
+   M2  large  624 ;

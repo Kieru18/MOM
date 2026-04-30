@@ -1,0 +1,10 @@
+model model.mod;
+data model.dat;
+option solver cplex;
+solve;
+display total_cost;
+display warehouse_type;
+display transport_factory_to_warehouse;
+display transport_warehouse_to_shop;
+display trucks_big_count;
+display trucks_small_count;
