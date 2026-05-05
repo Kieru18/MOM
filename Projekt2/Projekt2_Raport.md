@@ -3,9 +3,9 @@
 </div>
 
 # Modelowanie Matematyczne 26L
-## Projekt 2
+## Projekt 2, Dane nr 3
 
-## 1. Model programowania liniowego-całkowitoliczbowego
+## 1. Model programowania mieszanego liniowego-całkowitoliczbowego
 
 ### Zbiory
 
@@ -239,14 +239,14 @@ $transport\_warehouse\_to\_shop_{p,m,s}$
 
 #### Liczby ciężarówek
 
-$trucks\_big\_count_{w,m}$ — duże ciężarówki (W→M):
+$trucks\_big\_count_{w,m}$ - duże ciężarówki (W→M):
 
 | $w\ \backslash\ m$ | M1 | M2 |
 |--------------------|----|----|
 | W1                 | 0  | 5  |
 | W2                 | 3  | 2  |
 
-$trucks\_small\_count_{m,s}$ — małe ciężarówki (M→S):
+$trucks\_small\_count_{m,s}$ - małe ciężarówki (M→S):
 
 | $m\ \backslash\ s$ | S1 | S2 | S3 |
 |--------------------|----|----|-----|
