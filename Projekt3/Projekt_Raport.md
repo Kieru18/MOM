@@ -123,7 +123,7 @@ Jako rozkład stanów gospodarki przyjęto rozkład dwumianowy B(3, p=0,5). Mode
 | Umiarkowana recesja | 1 | 0,375 |
 | Silna recesja | 0 | 0,125 |
 
-Rozkład ten różni się od rozkładu zakładengo przez kryterium Laplace'a — stany umiarkowane są łącznie trzykrotnie bardziej prawdopodobne niż skrajne, co lepiej odzwierciedla rzeczywistość gospodarczą.
+Rozkład ten różni się od rozkładu zakładengo przez kryterium Laplace'a - stany umiarkowane są łącznie trzykrotnie bardziej prawdopodobne niż skrajne, co lepiej odzwierciedla rzeczywistość gospodarczą.
 
 ### Opis programu symulacyjnego
 Program losuje 100 stanów gospodarki zgodnie z B(3, 0,5) przy użyciu np.random.choice. Dla każdego wylosowanego stanu odczytywany jest zysk każdej z czterech strategii z macierzy wypłat. Po 100 losowaniach obliczana jest średnia wartość zysku dla każdej strategii, a wynik porównywany z decyzjami z Zadania 1.
@@ -173,7 +173,7 @@ print("Najlepsza strategia:", strategies[np.argmax(mean_profits)])
 ```
 
 ### Uzasadnienie wyniku
-Symulacja przy rozkładzie B(3, 0,5) potwierdza wynik kryterium Laplace'a — najlepsza strategia to "Utrzymać poziom produkcji" (17,71 mln PLN). Rozkład B(3, 0,5) faworyzuje stany umiarkowane (łącznie 75% prawdopodobieństwa), a strategia utrzymania poziomu jako jedyna nie ma katastrofalnego wyniku w żadnym ze stanów (minimum = 2 mln PLN). Strategie agresywne ("Znacznie zwiększyć") tracą na wartości ze względu na duże ryzyko straty przy recesji (-24 mln PLN), nawet gdy skrajne stany są mało prawdopodobne.
+Symulacja przy rozkładzie B(3, 0,5) potwierdza wynik kryterium Laplace'a - najlepsza strategia to "Utrzymać poziom produkcji" (17,71 mln PLN). Rozkład B(3, 0,5) faworyzuje stany umiarkowane (łącznie 75% prawdopodobieństwa), a strategia utrzymania poziomu jako jedyna nie ma katastrofalnego wyniku w żadnym ze stanów (minimum = 2 mln PLN). Strategie agresywne ("Znacznie zwiększyć") tracą na wartości ze względu na duże ryzyko straty przy recesji (-24 mln PLN), nawet gdy skrajne stany są mało prawdopodobne.
 
 ## 3. Gra o sumie zerowej
 Macierz wypłat w postaci ogólnej gry dwuosobowej o sumie zerowej znajduje się na górze raportu.
@@ -266,12 +266,15 @@ Pozostała macierz:
 **Rozwiązanie metodą graficzną:** 
 q = prawdopodobieństwo że Gospodarka wybierze Umiarkowany wzrost:
 
+![Metoda graficzna - strategia mieszana](mixed_strategy_graph.png)
+
 Oczekiwany zysk Drewruru dla każdej strategii jako funkcja q:
 - Utrzymać: 15q + 2(1-q) = **13q + 2**
 - Nieco zwiększyć: 23q + 0(1-q) = **23q**
 - Zmienić profil: 8q + 15(1-q) = **-7q + 15**
 
-Gospodarka minimalizuje górną obwiednię tych funkcji. Minimum jest w przecięciu dwóch rosnących/malejących krzywych:
+Gospodarka minimalizuje górną obwiednię tych funkcji. 
+Minimum znajduje się w przecięciu prostej malejącej i rosnącej:
 
 Nieco zwiększyć = Zmienić profil
 23q = -7q + 15
